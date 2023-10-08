@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		56512EAA2AD2991600409245 /* ShareSleepApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56512EA92AD2991600409245 /* ShareSleepApp.swift */; };
+		56512EAC2AD2991600409245 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56512EAB2AD2991600409245 /* ContentView.swift */; };
+		56512EAE2AD2991700409245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56512EAD2AD2991700409245 /* Assets.xcassets */; };
+		56512EB12AD2991700409245 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56512EB02AD2991700409245 /* Preview Assets.xcassets */; };
+		56512EBB2AD2991700409245 /* ShareSleepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56512EBA2AD2991700409245 /* ShareSleepTests.swift */; };
+		56512EC52AD2991700409245 /* ShareSleepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56512EC42AD2991700409245 /* ShareSleepUITests.swift */; };
+		56512EC72AD2991700409245 /* ShareSleepUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56512EC62AD2991700409245 /* ShareSleepUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		56512EB72AD2991700409245 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56512E9E2AD2991600409245 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56512EA52AD2991600409245;
+			remoteInfo = ShareSleep;
+		};
+		56512EC12AD2991700409245 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56512E9E2AD2991600409245 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56512EA52AD2991600409245;
+			remoteInfo = ShareSleep;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		56512EA62AD2991600409245 /* ShareSleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareSleep.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		56512EA92AD2991600409245 /* ShareSleepApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSleepApp.swift; sourceTree = "<group>"; };
+		56512EAB2AD2991600409245 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		56512EAD2AD2991700409245 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		56512EB02AD2991700409245 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		56512EB62AD2991700409245 /* ShareSleepTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareSleepTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56512EBA2AD2991700409245 /* ShareSleepTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSleepTests.swift; sourceTree = "<group>"; };
+		56512EC02AD2991700409245 /* ShareSleepUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareSleepUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56512EC42AD2991700409245 /* ShareSleepUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSleepUITests.swift; sourceTree = "<group>"; };
+		56512EC62AD2991700409245 /* ShareSleepUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSleepUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		56512EA32AD2991600409245 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56512EB32AD2991700409245 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56512EBD2AD2991700409245 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		56512E9D2AD2991600409245 = {
+			isa = PBXGroup;
+			children = (
+				56512EA82AD2991600409245 /* ShareSleep */,
+				56512EB92AD2991700409245 /* ShareSleepTests */,
+				56512EC32AD2991700409245 /* ShareSleepUITests */,
+				56512EA72AD2991600409245 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		56512EA72AD2991600409245 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56512EA62AD2991600409245 /* ShareSleep.app */,
+				56512EB62AD2991700409245 /* ShareSleepTests.xctest */,
+				56512EC02AD2991700409245 /* ShareSleepUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56512EA82AD2991600409245 /* ShareSleep */ = {
+			isa = PBXGroup;
+			children = (
+				56512EA92AD2991600409245 /* ShareSleepApp.swift */,
+				56512EAB2AD2991600409245 /* ContentView.swift */,
+				56512EAD2AD2991700409245 /* Assets.xcassets */,
+				56512EAF2AD2991700409245 /* Preview Content */,
+			);
+			path = ShareSleep;
+			sourceTree = "<group>";
+		};
+		56512EAF2AD2991700409245 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				56512EB02AD2991700409245 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		56512EB92AD2991700409245 /* ShareSleepTests */ = {
+			isa = PBXGroup;
+			children = (
+				56512EBA2AD2991700409245 /* ShareSleepTests.swift */,
+			);
+			path = ShareSleepTests;
+			sourceTree = "<group>";
+		};
+		56512EC32AD2991700409245 /* ShareSleepUITests */ = {
+			isa = PBXGroup;
+			children = (
+				56512EC42AD2991700409245 /* ShareSleepUITests.swift */,
+				56512EC62AD2991700409245 /* ShareSleepUITestsLaunchTests.swift */,
+			);
+			path = ShareSleepUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		56512EA52AD2991600409245 /* ShareSleep */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56512ECA2AD2991700409245 /* Build configuration list for PBXNativeTarget "ShareSleep" */;
+			buildPhases = (
+				56512EA22AD2991600409245 /* Sources */,
+				56512EA32AD2991600409245 /* Frameworks */,
+				56512EA42AD2991600409245 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShareSleep;
+			productName = ShareSleep;
+			productReference = 56512EA62AD2991600409245 /* ShareSleep.app */;
+			productType = "com.apple.product-type.application";
+		};
+		56512EB52AD2991700409245 /* ShareSleepTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56512ECD2AD2991700409245 /* Build configuration list for PBXNativeTarget "ShareSleepTests" */;
+			buildPhases = (
+				56512EB22AD2991700409245 /* Sources */,
+				56512EB32AD2991700409245 /* Frameworks */,
+				56512EB42AD2991700409245 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56512EB82AD2991700409245 /* PBXTargetDependency */,
+			);
+			name = ShareSleepTests;
+			productName = ShareSleepTests;
+			productReference = 56512EB62AD2991700409245 /* ShareSleepTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		56512EBF2AD2991700409245 /* ShareSleepUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56512ED02AD2991700409245 /* Build configuration list for PBXNativeTarget "ShareSleepUITests" */;
+			buildPhases = (
+				56512EBC2AD2991700409245 /* Sources */,
+				56512EBD2AD2991700409245 /* Frameworks */,
+				56512EBE2AD2991700409245 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56512EC22AD2991700409245 /* PBXTargetDependency */,
+			);
+			name = ShareSleepUITests;
+			productName = ShareSleepUITests;
+			productReference = 56512EC02AD2991700409245 /* ShareSleepUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		56512E9E2AD2991600409245 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					56512EA52AD2991600409245 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					56512EB52AD2991700409245 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 56512EA52AD2991600409245;
+					};
+					56512EBF2AD2991700409245 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 56512EA52AD2991600409245;
+					};
+				};
+			};
+			buildConfigurationList = 56512EA12AD2991600409245 /* Build configuration list for PBXProject "ShareSleep" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 56512E9D2AD2991600409245;
+			productRefGroup = 56512EA72AD2991600409245 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				56512EA52AD2991600409245 /* ShareSleep */,
+				56512EB52AD2991700409245 /* ShareSleepTests */,
+				56512EBF2AD2991700409245 /* ShareSleepUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		56512EA42AD2991600409245 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56512EB12AD2991700409245 /* Preview Assets.xcassets in Resources */,
+				56512EAE2AD2991700409245 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56512EB42AD2991700409245 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56512EBE2AD2991700409245 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		56512EA22AD2991600409245 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56512EAC2AD2991600409245 /* ContentView.swift in Sources */,
+				56512EAA2AD2991600409245 /* ShareSleepApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56512EB22AD2991700409245 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56512EBB2AD2991700409245 /* ShareSleepTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56512EBC2AD2991700409245 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56512EC72AD2991700409245 /* ShareSleepUITestsLaunchTests.swift in Sources */,
+				56512EC52AD2991700409245 /* ShareSleepUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		56512EB82AD2991700409245 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56512EA52AD2991600409245 /* ShareSleep */;
+			targetProxy = 56512EB72AD2991700409245 /* PBXContainerItemProxy */;
+		};
+		56512EC22AD2991700409245 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56512EA52AD2991600409245 /* ShareSleep */;
+			targetProxy = 56512EC12AD2991700409245 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		56512EC82AD2991700409245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		56512EC92AD2991700409245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		56512ECB2AD2991700409245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ShareSleep/Preview Content\"";
+				DEVELOPMENT_TEAM = 7RPD69GC7T;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pro.veit.ShareSleep;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		56512ECC2AD2991700409245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ShareSleep/Preview Content\"";
+				DEVELOPMENT_TEAM = 7RPD69GC7T;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pro.veit.ShareSleep;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		56512ECE2AD2991700409245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7RPD69GC7T;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pro.veit.ShareSleepTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShareSleep.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShareSleep";
+			};
+			name = Debug;
+		};
+		56512ECF2AD2991700409245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7RPD69GC7T;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pro.veit.ShareSleepTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShareSleep.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShareSleep";
+			};
+			name = Release;
+		};
+		56512ED12AD2991700409245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7RPD69GC7T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pro.veit.ShareSleepUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShareSleep;
+			};
+			name = Debug;
+		};
+		56512ED22AD2991700409245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7RPD69GC7T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pro.veit.ShareSleepUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShareSleep;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		56512EA12AD2991600409245 /* Build configuration list for PBXProject "ShareSleep" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56512EC82AD2991700409245 /* Debug */,
+				56512EC92AD2991700409245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56512ECA2AD2991700409245 /* Build configuration list for PBXNativeTarget "ShareSleep" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56512ECB2AD2991700409245 /* Debug */,
+				56512ECC2AD2991700409245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56512ECD2AD2991700409245 /* Build configuration list for PBXNativeTarget "ShareSleepTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56512ECE2AD2991700409245 /* Debug */,
+				56512ECF2AD2991700409245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56512ED02AD2991700409245 /* Build configuration list for PBXNativeTarget "ShareSleepUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56512ED12AD2991700409245 /* Debug */,
+				56512ED22AD2991700409245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 56512E9E2AD2991600409245 /* Project object */;
+}
