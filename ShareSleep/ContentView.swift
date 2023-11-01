@@ -88,18 +88,18 @@ struct ContentView: View {
                     }
                 }
                 
-                if let hartRateMax = sleepData?.hartRateMax {
+                if (sleepData?.hartRateMax) != nil {
                     Section("Time heartRate Max") {
                         Text(String(sleepData!.hartRateMax))
                     }
                 }
-                if let hartRateMin = sleepData?.hartRateMin {
+                if (sleepData?.hartRateMin) != nil {
                     Section("Time heartRate Min") {
                         Text(String(sleepData!.hartRateMin))
                     }
                 }
                 
-                if let hartRateMin = sleepData?.hartRateMin {
+                if (sleepData?.hartRateMin) != nil {
                     Section("Time heartRate Avg") {
                         Text(String(sleepData!.hartRateAvg))
                     }
