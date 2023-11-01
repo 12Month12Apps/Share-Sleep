@@ -34,10 +34,23 @@ struct ContentView: View {
     let healthKitManager = HealthKitManager()
 
     @State var sleepData: SleepDataModel?
+    @State var sleepScore: Double?
     
     var body: some View {
         VStack {
             List {
+                if sleepScore != nil {
+                    Section("Score") {
+                        Text(String((sleepScore)!))
+                    }
+                }
+                
+                if sleepData?.score != nil {
+                    Section("Score") {
+                        Text(String((sleepData?.score)!))
+                    }
+                }
+                
                 Section("Start Time") {
                     Text(sleepData?.startTime ?? Date(), format: .dateTime)
                 }
@@ -126,6 +139,13 @@ struct ContentView: View {
                     sleepData = sleepSamples as? SleepDataModel
                     let timeZone = TimeZone.current
                     print(timeZone)
+                }
+                
+                self.healthKitManager.sleepDept() { dept, error in
+                    guard let sleepDept = dept else { return }
+                    
+                    guard let sleepDuration = self.sleepData?.duration else { return }
+                    self.sleepScore = sleepDuration / 3600 * 100 / (7.5 + sleepDept / 5)
                 }
             }
         })

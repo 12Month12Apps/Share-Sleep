@@ -21,10 +21,12 @@ protocol SleepData {
     var hartRateMin: Double { get set }
     var hartRateMax: Double { get set }
     var hartRateAvg: Double { get set }
+    var score: Double? { get set }
+    var debt: Double? { get set }
 }
 
 class SleepDataModel: SleepData, ObservableObject {
-    internal init(duration: Double, startTime: Date, endTime: Date, timeAwake: Double, timeREM: Double, timeCore: Double, timeDeep: Double, InterruptionsCount: Int, timeNeededTillSleep: Double, hartRateMin: Double, hartRateMax: Double, hartRateAvg: Double) {
+    internal init(duration: Double, startTime: Date, endTime: Date, timeAwake: Double, timeREM: Double, timeCore: Double, timeDeep: Double, InterruptionsCount: Int, timeNeededTillSleep: Double, hartRateMin: Double, hartRateMax: Double, hartRateAvg: Double, score: Double?, debt: Double?) {
         self.duration = duration
         self.startTime = startTime
         self.endTime = endTime
@@ -37,6 +39,8 @@ class SleepDataModel: SleepData, ObservableObject {
         self.hartRateMin = hartRateMin
         self.hartRateMax = hartRateMax
         self.hartRateAvg = hartRateAvg
+        self.score = score
+        self.debt = debt
     }
     
     var duration: Double
@@ -51,6 +55,8 @@ class SleepDataModel: SleepData, ObservableObject {
     var hartRateMin: Double
     var hartRateMax: Double
     var hartRateAvg: Double
+    var score: Double?
+    var debt: Double?
 }
 
 enum HealthKitError: Error {
@@ -109,10 +115,37 @@ class HealthKitManager {
         }
     }
     
-    func querySleepData(completion: @escaping (SleepData?, Error?) -> Void) {
-        let sleepType = HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!
-        let startDate = Calendar.current.date(byAdding: .day, value: -1, to: Date())!
+    func sleepDept(completion: @escaping (Double?, Error?) -> Void) {
         let endDate = Date()
+        var startDate = Calendar.current.date(byAdding: .day, value: -14, to: endDate)!
+        var totalSleepDebt = 0.0
+
+        func queryNextDay(currentDate: Date) {
+            guard currentDate < endDate else {
+                completion(totalSleepDebt, nil)
+                return
+            }
+            let nextDate = Calendar.current.date(byAdding: .day, value: 1, to: currentDate)!
+            
+            querySleepData(startDate: currentDate, endDate: nextDate) { (sleepData, error) in
+                if let sleepData = sleepData, error == nil {
+                    let idealSleep = 7.5  // Angenommen, 8 Stunden Schlaf pro Nacht sind ideal
+                    let actualSleep = sleepData.duration / 3600  // Umrechnung von Sekunden in Stunden
+                    let sleepDebt = idealSleep - actualSleep
+                    totalSleepDebt += sleepDebt
+                }
+                queryNextDay(currentDate: nextDate)
+            }
+        }
+        
+        queryNextDay(currentDate: startDate)
+    }
+    
+    func querySleepData(startDate: Date = Calendar.current.date(byAdding: .day, value: -1, to: Date())!, 
+                        endDate: Date = Date(),
+                        completion: @escaping (SleepData?, Error?) -> Void) {
+        
+        let sleepType = HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate)
         
         let query = HKSampleQuery(sampleType: sleepType, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { (query, samples, error) in
@@ -121,6 +154,11 @@ class HealthKitManager {
                 return
             }
 
+            if sleepSamples.count == 0 {
+                completion(nil, HealthKitError.noData)
+                return
+            }
+            
             var timeREM = 0.0, timeCore = 0.0, timeDeep = 0.0, timeAwake = 0.0
 
             let bedTimeStart = sleepSamples.removeFirst()
@@ -168,7 +206,7 @@ class HealthKitManager {
                     timeNeededTillSleep: timeNeededTillSleep,
                     hartRateMin: minHart,
                     hartRateMax: maxHart,
-                    hartRateAvg: avgHart
+                    hartRateAvg: avgHart, score: nil, debt: nil
                 )
                 
                 completion(sleepData, nil)
