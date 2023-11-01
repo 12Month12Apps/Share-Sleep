@@ -117,7 +117,7 @@ class HealthKitManager {
     
     func sleepDept(completion: @escaping (Double?, Error?) -> Void) {
         let endDate = Date()
-        var startDate = Calendar.current.date(byAdding: .day, value: -14, to: endDate)!
+        let startDate = Calendar.current.date(byAdding: .day, value: -14, to: endDate)!
         var totalSleepDebt = 0.0
 
         func queryNextDay(currentDate: Date) {
@@ -126,10 +126,12 @@ class HealthKitManager {
                 return
             }
             let nextDate = Calendar.current.date(byAdding: .day, value: 1, to: currentDate)!
-            
+            let targetSleep = UserDefaults.standard.double(forKey: "targetedSleep")
+
             querySleepData(startDate: currentDate, endDate: nextDate) { (sleepData, error) in
                 if let sleepData = sleepData, error == nil {
-                    let idealSleep = 7.5  // Angenommen, 8 Stunden Schlaf pro Nacht sind ideal
+
+                    let idealSleep = targetSleep  // Angenommen, 8 Stunden Schlaf pro Nacht sind ideal
                     let actualSleep = sleepData.duration / 3600  // Umrechnung von Sekunden in Stunden
                     let sleepDebt = idealSleep - actualSleep
                     totalSleepDebt += sleepDebt

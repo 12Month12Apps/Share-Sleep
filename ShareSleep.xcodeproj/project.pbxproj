@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56306F6E2AF2B8CB009658BF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56306F6D2AF2B8CB009658BF /* SettingsView.swift */; };
 		56512EAA2AD2991600409245 /* ShareSleepApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56512EA92AD2991600409245 /* ShareSleepApp.swift */; };
 		56512EAC2AD2991600409245 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56512EAB2AD2991600409245 /* ContentView.swift */; };
 		56512EAE2AD2991700409245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56512EAD2AD2991700409245 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		56306F6D2AF2B8CB009658BF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		56512EA62AD2991600409245 /* ShareSleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareSleep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56512EA92AD2991600409245 /* ShareSleepApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSleepApp.swift; sourceTree = "<group>"; };
 		56512EAB2AD2991600409245 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				56512EAB2AD2991600409245 /* ContentView.swift */,
 				56512EAD2AD2991700409245 /* Assets.xcassets */,
 				56512EAF2AD2991700409245 /* Preview Content */,
+				56306F6D2AF2B8CB009658BF /* SettingsView.swift */,
 			);
 			path = ShareSleep;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56512EDD2AD3035200409245 /* HealthkitManager.swift in Sources */,
+				56306F6E2AF2B8CB009658BF /* SettingsView.swift in Sources */,
 				56512EAC2AD2991600409245 /* ContentView.swift in Sources */,
 				56512EAA2AD2991600409245 /* ShareSleepApp.swift in Sources */,
 			);
