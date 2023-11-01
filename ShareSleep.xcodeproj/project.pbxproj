@@ -14,6 +14,7 @@
 		56512EBB2AD2991700409245 /* ShareSleepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56512EBA2AD2991700409245 /* ShareSleepTests.swift */; };
 		56512EC52AD2991700409245 /* ShareSleepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56512EC42AD2991700409245 /* ShareSleepUITests.swift */; };
 		56512EC72AD2991700409245 /* ShareSleepUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56512EC62AD2991700409245 /* ShareSleepUITestsLaunchTests.swift */; };
+		56512EDD2AD3035200409245 /* HealthkitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56512EDC2AD3035200409245 /* HealthkitManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		56512EC02AD2991700409245 /* ShareSleepUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareSleepUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56512EC42AD2991700409245 /* ShareSleepUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSleepUITests.swift; sourceTree = "<group>"; };
 		56512EC62AD2991700409245 /* ShareSleepUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSleepUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		56512EDA2AD3024700409245 /* ShareSleep.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareSleep.entitlements; sourceTree = "<group>"; };
+		56512EDC2AD3035200409245 /* HealthkitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthkitManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 		56512EA82AD2991600409245 /* ShareSleep */ = {
 			isa = PBXGroup;
 			children = (
+				56512EDB2AD3034300409245 /* Services */,
+				56512EDA2AD3024700409245 /* ShareSleep.entitlements */,
 				56512EA92AD2991600409245 /* ShareSleepApp.swift */,
 				56512EAB2AD2991600409245 /* ContentView.swift */,
 				56512EAD2AD2991700409245 /* Assets.xcassets */,
@@ -127,6 +132,14 @@
 			path = ShareSleepUITests;
 			sourceTree = "<group>";
 		};
+		56512EDB2AD3034300409245 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				56512EDC2AD3035200409245 /* HealthkitManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +156,8 @@
 			dependencies = (
 			);
 			name = ShareSleep;
+			packageProductDependencies = (
+			);
 			productName = ShareSleep;
 			productReference = 56512EA62AD2991600409245 /* ShareSleep.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +230,8 @@
 				Base,
 			);
 			mainGroup = 56512E9D2AD2991600409245;
+			packageReferences = (
+			);
 			productRefGroup = 56512EA72AD2991600409245 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56512EDD2AD3035200409245 /* HealthkitManager.swift in Sources */,
 				56512EAC2AD2991600409245 /* ContentView.swift in Sources */,
 				56512EAA2AD2991600409245 /* ShareSleepApp.swift in Sources */,
 			);
@@ -419,12 +437,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ShareSleep/ShareSleep.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ShareSleep/Preview Content\"";
 				DEVELOPMENT_TEAM = 7RPD69GC7T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Wir benötigen Zugriff auf Ihre Gesundheitsdaten, um Ihre Schlafinformationen abzurufen.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,12 +468,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ShareSleep/ShareSleep.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ShareSleep/Preview Content\"";
 				DEVELOPMENT_TEAM = 7RPD69GC7T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Wir benötigen Zugriff auf Ihre Gesundheitsdaten, um Ihre Schlafinformationen abzurufen.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
