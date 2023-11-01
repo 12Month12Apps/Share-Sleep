@@ -3,4 +3,238 @@
    uuid = "BD6A43D2-6D70-424F-A411-B1F77B8CCFCC"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F756048A-E61A-4873-AADF-351DF81EAA92"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShareSleep/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1DD2F52A-535B-47F9-A8D4-DB3B08120C4B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShareSleep/Services/HealthkitManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "querySleepData(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1DD2F52A-535B-47F9-A8D4-DB3B08120C4B - 5038824ee6d63d7f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.HKSampleQuery, Swift.Optional&lt;Swift.Array&lt;__C.HKSample&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ShareSleep.HealthKitManager.querySleepData(completion: (Swift.Optional&lt;ShareSleep.SleepData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ShareSleep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/veitprogl/Documents/Git/12Month12Apps/ShareSleep/ShareSleep/Services/HealthkitManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "1220">
+               </Location>
+               <Location
+                  uuid = "1DD2F52A-535B-47F9-A8D4-DB3B08120C4B - 5038824ee6d63d7f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.HKSampleQuery, Swift.Optional&lt;Swift.Array&lt;__C.HKSample&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ShareSleep.HealthKitManager.querySleepData(completion: (Swift.Optional&lt;ShareSleep.SleepData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ShareSleep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/veitprogl/Documents/Git/12Month12Apps/ShareSleep/ShareSleep/Services/HealthkitManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "1488">
+               </Location>
+               <Location
+                  uuid = "1DD2F52A-535B-47F9-A8D4-DB3B08120C4B - 5038824ee6d63d7f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.HKSampleQuery, Swift.Optional&lt;Swift.Array&lt;__C.HKSample&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ShareSleep.HealthKitManager.querySleepData(completion: (Swift.Optional&lt;ShareSleep.SleepData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ShareSleep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/veitprogl/Documents/Git/12Month12Apps/ShareSleep/ShareSleep/Services/HealthkitManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "1020">
+               </Location>
+               <Location
+                  uuid = "1DD2F52A-535B-47F9-A8D4-DB3B08120C4B - 5038824ee6d63d7f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.HKSampleQuery, Swift.Optional&lt;Swift.Array&lt;__C.HKSample&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ShareSleep.HealthKitManager.querySleepData(completion: (Swift.Optional&lt;ShareSleep.SleepData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ShareSleep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/veitprogl/Documents/Git/12Month12Apps/ShareSleep/ShareSleep/Services/HealthkitManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "1300">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "29159AEA-2BD0-4D1F-9FF7-EB0CF8696973"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShareSleep/Services/HealthkitManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "querySleepData(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "29159AEA-2BD0-4D1F-9FF7-EB0CF8696973 - 5038824ee6d63de3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.HKSampleQuery, Swift.Optional&lt;Swift.Array&lt;__C.HKSample&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ShareSleep.HealthKitManager.querySleepData(completion: (Swift.Optional&lt;ShareSleep.SleepData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ShareSleep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/veitprogl/Documents/Git/12Month12Apps/ShareSleep/ShareSleep/Services/HealthkitManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "1060">
+               </Location>
+               <Location
+                  uuid = "29159AEA-2BD0-4D1F-9FF7-EB0CF8696973 - 5038824ee6d63de3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.HKSampleQuery, Swift.Optional&lt;Swift.Array&lt;__C.HKSample&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ShareSleep.HealthKitManager.querySleepData(completion: (Swift.Optional&lt;ShareSleep.SleepData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ShareSleep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/veitprogl/Documents/Git/12Month12Apps/ShareSleep/ShareSleep/Services/HealthkitManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "1064">
+               </Location>
+               <Location
+                  uuid = "29159AEA-2BD0-4D1F-9FF7-EB0CF8696973 - 5038824ee6d63de3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.HKSampleQuery, Swift.Optional&lt;Swift.Array&lt;__C.HKSample&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ShareSleep.HealthKitManager.querySleepData(completion: (Swift.Optional&lt;ShareSleep.SleepData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ShareSleep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/veitprogl/Documents/Git/12Month12Apps/ShareSleep/ShareSleep/Services/HealthkitManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "1068">
+               </Location>
+               <Location
+                  uuid = "29159AEA-2BD0-4D1F-9FF7-EB0CF8696973 - 5038824ee6d63de3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.HKSampleQuery, Swift.Optional&lt;Swift.Array&lt;__C.HKSample&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ShareSleep.HealthKitManager.querySleepData(completion: (Swift.Optional&lt;ShareSleep.SleepData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ShareSleep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/veitprogl/Documents/Git/12Month12Apps/ShareSleep/ShareSleep/Services/HealthkitManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "1072">
+               </Location>
+               <Location
+                  uuid = "29159AEA-2BD0-4D1F-9FF7-EB0CF8696973 - 5038824ee6d63de3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.HKSampleQuery, Swift.Optional&lt;Swift.Array&lt;__C.HKSample&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ShareSleep.HealthKitManager.querySleepData(completion: (Swift.Optional&lt;ShareSleep.SleepData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ShareSleep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/veitprogl/Documents/Git/12Month12Apps/ShareSleep/ShareSleep/Services/HealthkitManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "896">
+               </Location>
+               <Location
+                  uuid = "29159AEA-2BD0-4D1F-9FF7-EB0CF8696973 - 5038824ee6d63de3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.HKSampleQuery, Swift.Optional&lt;Swift.Array&lt;__C.HKSample&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ShareSleep.HealthKitManager.querySleepData(completion: (Swift.Optional&lt;ShareSleep.SleepData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ShareSleep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/veitprogl/Documents/Git/12Month12Apps/ShareSleep/ShareSleep/Services/HealthkitManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "900">
+               </Location>
+               <Location
+                  uuid = "29159AEA-2BD0-4D1F-9FF7-EB0CF8696973 - 5038824ee6d63de3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.HKSampleQuery, Swift.Optional&lt;Swift.Array&lt;__C.HKSample&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ShareSleep.HealthKitManager.querySleepData(completion: (Swift.Optional&lt;ShareSleep.SleepData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ShareSleep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/veitprogl/Documents/Git/12Month12Apps/ShareSleep/ShareSleep/Services/HealthkitManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "904">
+               </Location>
+               <Location
+                  uuid = "29159AEA-2BD0-4D1F-9FF7-EB0CF8696973 - 5038824ee6d63de3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.HKSampleQuery, Swift.Optional&lt;Swift.Array&lt;__C.HKSample&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ShareSleep.HealthKitManager.querySleepData(completion: (Swift.Optional&lt;ShareSleep.SleepData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ShareSleep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/veitprogl/Documents/Git/12Month12Apps/ShareSleep/ShareSleep/Services/HealthkitManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "908">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -60,6 +60,11 @@ enum HealthKitError: Error {
 class HealthKitManager {
     private let healthStore = HKHealthStore()
     
+    func getAuthorizationState() -> HKAuthorizationStatus {
+        let authorizationStatusSleep = healthStore.authorizationStatus(for: HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!)
+        return authorizationStatusSleep
+    }
+    
     func requestAuthorization(completion: @escaping (Bool) -> Void) {
         guard HKHealthStore.isHealthDataAvailable() else {
             completion(false)
@@ -68,7 +73,8 @@ class HealthKitManager {
         
         let readTypes: Set = [HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!, HKQuantityType.quantityType(forIdentifier: .heartRate)!]
         
-        let authorizationStatusSleep = healthStore.authorizationStatus(for: HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!)
+        let authorizationStatusSleep = getAuthorizationState()
+        
         let authorizationStatusHeartRate = healthStore.authorizationStatus(for: HKQuantityType.quantityType(forIdentifier: .heartRate)!)
 
         if authorizationStatusSleep == .notDetermined || authorizationStatusHeartRate == .notDetermined {
@@ -105,8 +111,8 @@ class HealthKitManager {
     
     func querySleepData(completion: @escaping (SleepData?, Error?) -> Void) {
         let sleepType = HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!
-        let startDate = Calendar.current.date(byAdding: .day, value: -2, to: Date())!
-        let endDate = Calendar.current.date(byAdding: .day, value: -1, to: Date())!
+        let startDate = Calendar.current.date(byAdding: .day, value: -1, to: Date())!
+        let endDate = Date()
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate)
         
         let query = HKSampleQuery(sampleType: sleepType, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { (query, samples, error) in
@@ -117,14 +123,14 @@ class HealthKitManager {
 
             var timeREM = 0.0, timeCore = 0.0, timeDeep = 0.0, timeAwake = 0.0
 
-            let bedTimeStart = sleepSamples.dropFirst()
+            let bedTimeStart = sleepSamples.removeFirst()
             
             for sample in sleepSamples {
                 let duration = sample.endDate.timeIntervalSince(sample.startDate)
                 switch sample.value {
-                case HKCategoryValueSleepAnalysis.asleepUnspecified.rawValue:
+                case HKCategoryValueSleepAnalysis.asleepCore.rawValue:
                     timeCore += duration
-                case HKCategoryValueSleepAnalysis.inBed.rawValue:
+                case HKCategoryValueSleepAnalysis.awake.rawValue:
                     timeAwake += duration
                 case HKCategoryValueSleepAnalysis.asleepREM.rawValue:
                     timeREM += duration
@@ -139,19 +145,19 @@ class HealthKitManager {
             
             guard let sleepStart = sleepSamples.first?.startDate else { return completion(nil, HealthKitError.noData) }
             guard let sleepEnd = sleepSamples.last?.endDate else { return completion(nil, HealthKitError.noData) }
-            guard let bedTimeStartDate = bedTimeStart.first?.startDate else { return completion(nil, HealthKitError.noData) }
-            guard let timeNeededTillSleep = bedTimeStart.first?.endDate.timeIntervalSince(bedTimeStartDate) else { return completion(nil, HealthKitError.noData) }
-            let sleepInterruptions = sleepSamples.filter( { $0.value == HKCategoryValueSleepAnalysis.asleepUnspecified.rawValue } ).count
+            let timeNeededTillSleep = bedTimeStart.endDate.timeIntervalSince( bedTimeStart.startDate)
+            
+            let sleepInterruptions = sleepSamples.filter( { $0.value == HKCategoryValueSleepAnalysis.awake.rawValue } ).count
             
             
-            self.queryHeartRate(start: startDate, end: endDate) { minHart, maxHart, avgHart, err in
+            self.queryHeartRate(start: sleepStart, end: sleepEnd) { minHart, maxHart, avgHart, err in
                 
                 if err != nil {
                     completion(nil, err)
                 }
                 
                 sleepData = SleepDataModel(
-                    duration: sleepEnd.timeIntervalSince(sleepStart),
+                    duration: sleepEnd.timeIntervalSince(sleepStart) - timeAwake,
                     startTime: sleepStart,
                     endTime: sleepEnd,
                     timeAwake: timeAwake,
