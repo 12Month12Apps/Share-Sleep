@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Charts
 
 extension String {
     static func timeString(from seconds: Double) -> String {
@@ -30,17 +31,51 @@ extension String {
         return timeString
     }
 }
+
+struct SleepDataBarChartView: View {
+    var sleepDepChart: [Double]
+
+    var body: some View {
+        Chart {
+            ForEach(sleepDepChart.indices, id: \.self) { index in
+                BarMark(
+                    x: .value("Tag", index),
+                    y: .value("Schlafdefizit", sleepDepChart[index])
+                )
+            }
+        }
+        .chartXAxis {
+            AxisMarks(values: .stride(by: 1)) { _ in
+                AxisGridLine()
+                AxisTick()
+                AxisValueLabel()
+            }
+        }
+        .chartYAxis {
+            AxisMarks(values: .automatic(desiredCount: 5)) { _ in
+                AxisGridLine()
+                AxisTick()
+                AxisValueLabel()
+            }
+        }
+    }
+}
+
 struct ContentView: View {
     let healthKitManager = HealthKitManager()
 
     @State var sleepData: SleepDataModel?
     @State var sleepScore: Double?
     @State var showSettings: Bool = false
+    @State var sleepChart: [Double] = []
     
     var body: some View {
         NavigationView {
             VStack {
                 List {
+                    SleepDataBarChartView(sleepDepChart: sleepChart)
+                       .padding()
+                    
                     if sleepScore != nil {
                         Section("Score") {
                             Text(String((sleepScore)!))
@@ -159,10 +194,11 @@ struct ContentView: View {
             }
             
             self.healthKitManager.sleepDept() { dept, error in
-                guard let sleepDept = dept else { return }
                 
+                sleepChart = dept
                 guard let sleepDuration = self.sleepData?.duration else { return }
-                let sleepNeeded = targetSleep + sleepDept / 5
+                let totalSleepDept = dept.reduce(0, +)
+                let sleepNeeded = targetSleep + totalSleepDept / 5
                 let sleepScore = sleepDuration / 3600 * 100 / sleepNeeded
                 self.sleepScore = (sleepScore * 100).rounded() / 100
             }

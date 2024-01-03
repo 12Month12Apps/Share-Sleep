@@ -23,9 +23,10 @@ protocol SleepData {
     var hartRateAvg: Double { get set }
     var score: Double? { get set }
     var debt: Double? { get set }
+    var sleepDepChart: [Double] { get set }
 }
 
-class SleepDataModel: SleepData, ObservableObject {
+struct SleepDataModel: SleepData {
     internal init(duration: Double, startTime: Date, endTime: Date, timeAwake: Double, timeREM: Double, timeCore: Double, timeDeep: Double, InterruptionsCount: Int, timeNeededTillSleep: Double, hartRateMin: Double, hartRateMax: Double, hartRateAvg: Double, score: Double?, debt: Double?) {
         self.duration = duration
         self.startTime = startTime
@@ -57,6 +58,7 @@ class SleepDataModel: SleepData, ObservableObject {
     var hartRateAvg: Double
     var score: Double?
     var debt: Double?
+    var sleepDepChart: [Double] = []
 }
 
 enum HealthKitError: Error {
@@ -115,14 +117,15 @@ class HealthKitManager {
         }
     }
     
-    func sleepDept(completion: @escaping (Double?, Error?) -> Void) {
+    func sleepDept(completion: @escaping ([Double], Error?) -> Void) {
         let endDate = Date()
         let startDate = Calendar.current.date(byAdding: .day, value: -14, to: endDate)!
-        var totalSleepDebt = 0.0
+//        var totalSleepDebt = 0.0
+        var sleepDeps: [Double] = []
 
         func queryNextDay(currentDate: Date) {
             guard currentDate < endDate else {
-                completion(totalSleepDebt, nil)
+                completion(sleepDeps, nil)
                 return
             }
             let nextDate = Calendar.current.date(byAdding: .day, value: 1, to: currentDate)!
@@ -134,7 +137,8 @@ class HealthKitManager {
                     let idealSleep = targetSleep  // Angenommen, 8 Stunden Schlaf pro Nacht sind ideal
                     let actualSleep = sleepData.duration / 3600  // Umrechnung von Sekunden in Stunden
                     let sleepDebt = idealSleep - actualSleep
-                    totalSleepDebt += sleepDebt
+                    sleepDeps.append(sleepDebt)
+//                    totalSleepDebt += sleepDebt
                 }
                 queryNextDay(currentDate: nextDate)
             }
@@ -183,7 +187,11 @@ class HealthKitManager {
             
             var sleepData: SleepData? = nil
             
-            guard let sleepStart = sleepSamples.first?.startDate else { return completion(nil, HealthKitError.noData) }
+            guard let sleepStart = sleepSamples.first(where: {
+                $0.value == HKCategoryValueSleepAnalysis.inBed.rawValue
+            } )?.startDate else {
+                return completion(nil, HealthKitError.noData)
+            }
             guard let sleepEnd = sleepSamples.last?.endDate else { return completion(nil, HealthKitError.noData) }
             let timeNeededTillSleep = bedTimeStart.endDate.timeIntervalSince( bedTimeStart.startDate)
             
